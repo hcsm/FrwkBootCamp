@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{95A03E0A-396A-468E-B2BD-369901627931}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiGateways", "ApiGateways", "{0031A73B-3EEE-4A2D-B66C-F3D0C6B724B9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web.Bff.Framebook", "Web.Bff.Framebook", "{53C6809C-63FD-48C0-8553-D8BC605AADED}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Mobile.Bff.Framebook", "Mobile.Bff.Framebook", "{A06F4494-30ED-41C7-A1CC-7FBC0C2175C3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{124AE427-1421-48B1-A963-2E0F105CA9CB}"
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0031A73B-3EEE-4A2D-B66C-F3D0C6B724B9} = {95A03E0A-396A-468E-B2BD-369901627931}
+		{53C6809C-63FD-48C0-8553-D8BC605AADED} = {0031A73B-3EEE-4A2D-B66C-F3D0C6B724B9}
+		{A06F4494-30ED-41C7-A1CC-7FBC0C2175C3} = {0031A73B-3EEE-4A2D-B66C-F3D0C6B724B9}
+		{124AE427-1421-48B1-A963-2E0F105CA9CB} = {95A03E0A-396A-468E-B2BD-369901627931}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C853F97B-D0C8-44AA-AB60-EE8CEDBDF78C}
+	EndGlobalSection
+EndGlobal
