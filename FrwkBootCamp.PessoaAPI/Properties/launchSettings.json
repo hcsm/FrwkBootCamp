@@ -12,15 +12,15 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "Pessoa",
+      "launchUrl": "Profissional",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "FrwkBootCamp.PessoaAPI": {
+    "FrwkBootCamp.ProfissionalAPI": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "Pessoa",
+      "launchUrl": "Profissional",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
@@ -29,7 +29,7 @@
     "Docker": {
       "commandName": "Docker",
       "launchBrowser": true,
-      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/Pessoa",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/Profissional",
       "publishAllPorts": true,
       "useSSL": true
     }

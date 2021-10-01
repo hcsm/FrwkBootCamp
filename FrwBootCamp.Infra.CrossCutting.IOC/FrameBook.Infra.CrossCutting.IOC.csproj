@@ -9,8 +9,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\FrwkBootCamp.Application\FrwkBootCamp.Business.csproj" />
-    <ProjectReference Include="..\FrwkBootCamp.Infra.Repository\FrwkBootCamp.Infra.Repository.csproj" />
+    <ProjectReference Include="..\FrwkBootCamp.Application\FrameBook.Business.csproj" />
+    <ProjectReference Include="..\FrwkBootCamp.Infra.Repository\FrameBook.Infra.Repository.csproj" />
   </ItemGroup>
 
 </Project>

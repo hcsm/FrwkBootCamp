@@ -1,33 +1,33 @@
 ﻿using Autofac;
-using FrwkBootCamp.Domain.Interfaces.Repositories;
-using FrwkBootCamp.Domain.Interfaces.Services;
-using FrwkBootCamp.Domain.Services;
-using FrwkBootCamp.Infra.CrossCutting.Adapter.Interfaces;
-using FrwkBootCamp.Infra.CrossCutting.Adapter.Map;
-using FrwkBootCamp.Infra.Repository;
-using FrwkBootCamp.Pessoa.Application.Interfaces;
-using FrwkBootCamp.Pessoa.Application.Service;
+using FrameBook.Business.Interfaces;
+using FrameBook.Business.Service;
+using FrameBook.Domain.Interfaces.Repositories;
+using FrameBook.Domain.Interfaces.Services;
+using FrameBook.Domain.Services;
+using FrameBook.Infra.CrossCutting.Adapter.Interfaces;
+using FrameBook.Infra.CrossCutting.Adapter.Map;
+using FrameBook.Infra.Repository;
 
-namespace FrwkBootCamp.Infra.CrossCutting.IOC
+namespace FrameBook.Infra.CrossCutting.IOC
 {
     public class ConfigurationIOC
     {
         public static void Load(ContainerBuilder builder)
         {
             #region IOC Application
-            builder.RegisterType<BusinessServiceGestaoPessoa>().As<IBusinessServiceGestaoPessoa>();
+            builder.RegisterType<BusinessServiceGestaoProfissional>().As<IBusinessServiceGestaoProfissional>();
             #endregion
 
             #region IOC Services
-            builder.RegisterType<ServicePessoa>().As<IServicePessoa>();
+            builder.RegisterType<ServiceProfissional>().As<IServiceProfissional>();
             #endregion
 
             #region IOC Repositorys SQL
-            builder.RegisterType<RepositoryPessoa>().As<IRepositoryPessoa>();
+            builder.RegisterType<RepositoryProfissional>().As<IRepositoryProfissional>();
             #endregion
 
             #region IOC Mapper
-            builder.RegisterType<MapperPessoa>().As<IMapperPessoa>();
+            builder.RegisterType<MapperProfissional>().As<IMapperProfissional>();
             #endregion
         }
     }

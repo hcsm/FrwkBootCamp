@@ -1,11 +1,11 @@
-﻿using FrwkBootCamp.Domain.Interfaces.Repositories;
-using FrwkBootCamp.Infra.Data;
-using Microsoft.EntityFrameworkCore;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using FrameBook.Domain.Interfaces.Repositories;
+using FrameBook.Infra.Data;
+using Microsoft.EntityFrameworkCore;
 
-namespace FrwkBootCamp.Infra.Repository
+namespace FrameBook.Infra.Repository
 {
     public abstract class RepositoryBase<TEntity> : IDisposable, IRepositoryBase<TEntity> where TEntity : class
     {

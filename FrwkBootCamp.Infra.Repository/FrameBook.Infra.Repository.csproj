@@ -9,7 +9,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\FrwkBootCamp.Domain\FrwkBootCamp.Domain.csproj" />
+    <ProjectReference Include="..\FrwkBootCamp.Domain\FrameBook.Domain.csproj" />
+    <ProjectReference Include="..\FrwkBootCamp.Infra.Data\FrameBook.Infra.Data.csproj" />
   </ItemGroup>
 
 </Project>

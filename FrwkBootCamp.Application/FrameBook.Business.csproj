@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FrwBootCamp.Infra.CrossCutting.Adapter\FrameBook.Infra.CrossCutting.Adapter.csproj" />
+    <ProjectReference Include="..\FrwkBootCamp.Application.DTO\FrameBook.Business.DTO.csproj" />
+    <ProjectReference Include="..\FrwkBootCamp.Domain\FrameBook.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

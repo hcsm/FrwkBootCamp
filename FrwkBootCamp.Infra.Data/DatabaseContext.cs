@@ -1,11 +1,9 @@
-﻿using FrwkBootCamp.Domain.Models;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Linq;
-using System.Text;
+using FrameBook.Domain.Models;
+using Microsoft.EntityFrameworkCore;
 
-namespace FrwkBootCamp.Infra.Data
+namespace FrameBook.Infra.Data
 {
     public class DatabaseContext : DbContext
     {
@@ -15,7 +13,7 @@ namespace FrwkBootCamp.Infra.Data
 
         public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options) { }
 
-        public DbSet<Pessoa> Pessoas { get; set; }
+        public DbSet<Profissional> Profissionais { get; set; }
 
         public override int SaveChanges()
         {

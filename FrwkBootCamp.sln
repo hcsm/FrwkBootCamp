@@ -19,27 +19,27 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.0 - Domain", "3.0 - Domai
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.0 - Infrastructure", "4.0 - Infrastructure", "{5EDA22F0-BFBF-4006-BD38-05B597AA62ED}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrwkBootCamp.Domain", "FrwkBootCamp.Domain\FrwkBootCamp.Domain.csproj", "{96670560-773D-4E06-972F-39F71A00F27B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrameBook.Domain", "FrwkBootCamp.Domain\FrameBook.Domain.csproj", "{96670560-773D-4E06-972F-39F71A00F27B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1 - Data", "4.1 - Data", "{C3534021-2F92-4336-BFC8-91F0C74FE28B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2 - CrossCutting", "4.2 - CrossCutting", "{DF408DFF-320B-4088-A5FA-1F2A4D5809C2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrwkBootCamp.Infra.Data", "FrwkBootCamp.Infra.Data\FrwkBootCamp.Infra.Data.csproj", "{669E5367-9F59-4F37-9B7C-4FD6FDBFAE52}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrameBook.Infra.Data", "FrwkBootCamp.Infra.Data\FrameBook.Infra.Data.csproj", "{669E5367-9F59-4F37-9B7C-4FD6FDBFAE52}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.0 - Business", "2.0 - Business", "{8D4C96A5-D476-4367-9619-9F7FD522D57C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrwkBootCamp.Business", "FrwkBootCamp.Application\FrwkBootCamp.Business.csproj", "{E40B2F23-B292-4892-A9E2-4D0CDA709CF4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrameBook.Business", "FrwkBootCamp.Application\FrameBook.Business.csproj", "{E40B2F23-B292-4892-A9E2-4D0CDA709CF4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrwkBootCamp.Infra.Repository", "FrwkBootCamp.Infra.Repository\FrwkBootCamp.Infra.Repository.csproj", "{7549F02D-82EF-404A-B9FB-015356C49445}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrameBook.Infra.Repository", "FrwkBootCamp.Infra.Repository\FrameBook.Infra.Repository.csproj", "{7549F02D-82EF-404A-B9FB-015356C49445}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrwkBootCamp.Infra.CrossCutting.Adapter", "FrwBootCamp.Infra.CrossCutting.Adapter\FrwkBootCamp.Infra.CrossCutting.Adapter.csproj", "{5E9B4EB9-89FD-4E3E-AA8F-76FEE76A0BAD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrameBook.Infra.CrossCutting.Adapter", "FrwBootCamp.Infra.CrossCutting.Adapter\FrameBook.Infra.CrossCutting.Adapter.csproj", "{5E9B4EB9-89FD-4E3E-AA8F-76FEE76A0BAD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrwkBootCamp.Infra.CrossCutting.IOC", "FrwBootCamp.Infra.CrossCutting.IOC\FrwkBootCamp.Infra.CrossCutting.IOC.csproj", "{DC7464F4-C759-4F96-AD16-1CDAE3C47889}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrameBook.Infra.CrossCutting.IOC", "FrwBootCamp.Infra.CrossCutting.IOC\FrameBook.Infra.CrossCutting.IOC.csproj", "{DC7464F4-C759-4F96-AD16-1CDAE3C47889}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrwkBootCamp.Business.DTO", "FrwkBootCamp.Application.DTO\FrwkBootCamp.Business.DTO.csproj", "{5358C603-5E37-485E-82E1-9775F454FF65}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrameBook.Business.DTO", "FrwkBootCamp.Application.DTO\FrameBook.Business.DTO.csproj", "{5358C603-5E37-485E-82E1-9775F454FF65}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrwkBootCamp.PessoaAPI", "FrwkBootCamp.PessoaAPI\FrwkBootCamp.PessoaAPI.csproj", "{065696D4-059C-4FF1-8BA3-7595C154AC83}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrameBook.ProfissionalAPI", "FrwkBootCamp.PessoaAPI\FrameBook.ProfissionalAPI.csproj", "{065696D4-059C-4FF1-8BA3-7595C154AC83}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

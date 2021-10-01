@@ -1,4 +1,4 @@
-﻿namespace FrwkBootCamp.Domain.Models
+﻿namespace FrameBook.Domain.Models
 {
     public class BaseEntity
     {

@@ -7,16 +7,16 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
 WORKDIR /src
-COPY ["FrwkBootCamp.PessoaAPI/FrwkBootCamp.PessoaAPI.csproj", "FrwkBootCamp.PessoaAPI/"]
-RUN dotnet restore "FrwkBootCamp.PessoaAPI/FrwkBootCamp.PessoaAPI.csproj"
+COPY ["FrwkBootCamp.ProfissionalAPI/FrwkBootCamp.ProfissionalAPI.csproj", "FrwkBootCamp.ProfissionalAPI/"]
+RUN dotnet restore "FrwkBootCamp.ProfissionalAPI/FrwkBootCamp.ProfissionalAPI.csproj"
 COPY . .
-WORKDIR "/src/FrwkBootCamp.PessoaAPI"
-RUN dotnet build "FrwkBootCamp.PessoaAPI.csproj" -c Release -o /app/build
+WORKDIR "/src/FrwkBootCamp.ProfissionalAPI"
+RUN dotnet build "FrwkBootCamp.ProfissionalAPI.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "FrwkBootCamp.PessoaAPI.csproj" -c Release -o /app/publish
+RUN dotnet publish "FrwkBootCamp.ProfissionalAPI.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "FrwkBootCamp.PessoaAPI.dll"]
+ENTRYPOINT ["dotnet", "FrwkBootCamp.ProfissionalAPI.dll"]

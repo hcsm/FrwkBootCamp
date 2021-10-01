@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace FrwkBootCamp.Domain.Interfaces.Repositories
+namespace FrameBook.Domain.Interfaces.Repositories
 {
     public interface IRepositoryBase<TEntity> where TEntity : class
     {

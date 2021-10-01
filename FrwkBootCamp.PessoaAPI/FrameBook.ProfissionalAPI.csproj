@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <UserSecretsId>aspnet-FrwkBootCamp.PessoaAPI-1C7D1693-1081-4808-89CE-D148C9E8E964</UserSecretsId>
+    <UserSecretsId>aspnet-FrwkBootCamp.ProfissionalAPI-1C7D1693-1081-4808-89CE-D148C9E8E964</UserSecretsId>
     <WebProject_DirectoryAccessLevelKey>0</WebProject_DirectoryAccessLevelKey>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
@@ -17,9 +17,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\FrwBootCamp.Infra.CrossCutting.IOC\FrwkBootCamp.Infra.CrossCutting.IOC.csproj" />
-    <ProjectReference Include="..\FrwkBootCamp.Application\FrwkBootCamp.Business.csproj" />
-    <ProjectReference Include="..\FrwkBootCamp.Infra.Data\FrwkBootCamp.Infra.Data.csproj" />
+    <ProjectReference Include="..\FrwBootCamp.Infra.CrossCutting.IOC\FrameBook.Infra.CrossCutting.IOC.csproj" />
+    <ProjectReference Include="..\FrwkBootCamp.Application\FrameBook.Business.csproj" />
+    <ProjectReference Include="..\FrwkBootCamp.Infra.Data\FrameBook.Infra.Data.csproj" />
   </ItemGroup>
 
 </Project>

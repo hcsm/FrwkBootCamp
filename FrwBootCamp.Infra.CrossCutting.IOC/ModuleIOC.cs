@@ -1,6 +1,6 @@
 ﻿using Autofac;
 
-namespace FrwkBootCamp.Infra.CrossCutting.IOC
+namespace FrameBook.Infra.CrossCutting.IOC
 {
     public class ModuleIOC : Module
     {

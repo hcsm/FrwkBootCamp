@@ -2,7 +2,7 @@ using Autofac.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace FrwkBootCamp.PessoaAPI
+namespace FrameBook.ProfissionalAPI
 {
     public class Program
     {

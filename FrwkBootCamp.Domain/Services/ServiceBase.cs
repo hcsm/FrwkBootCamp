@@ -1,9 +1,9 @@
-﻿using FrwkBootCamp.Domain.Interfaces.Repositories;
-using FrwkBootCamp.Domain.Interfaces.Services;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using FrameBook.Domain.Interfaces.Repositories;
+using FrameBook.Domain.Interfaces.Services;
 
-namespace FrwkBootCamp.Domain.Services
+namespace FrameBook.Domain.Services
 {
     public abstract class ServiceBase<TEntity> : IDisposable, IServiceBase<TEntity> where TEntity : class
     {

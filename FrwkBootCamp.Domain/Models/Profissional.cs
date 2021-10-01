@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace FrwkBootCamp.Domain.Models
+namespace FrameBook.Domain.Models
 {
-    public class Pessoa : BaseEntity
+    public class Profissional : BaseEntity
     {
         public string Nome { get; set; }
         

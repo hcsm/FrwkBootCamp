@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace FrwkBootCamp.Domain.Interfaces.Services
+namespace FrameBook.Domain.Interfaces.Services
 {
     public interface IServiceBase<TEntity> where TEntity : class
     {
