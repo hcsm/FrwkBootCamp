@@ -31,6 +31,9 @@ namespace FrameBook.ProfissionalAPI
             services.AddAuthentication(AzureADDefaults.BearerAuthenticationScheme)
                 .AddAzureADBearer(options => Configuration.Bind("AzureAd", options));
             services.AddControllers();
+            services.AddSwaggerGen(c => {
+                c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "Swagger", Version = "v1" });
+            });
         }
 
         public void ConfigureContainer(ContainerBuilder Builder)
@@ -56,6 +59,13 @@ namespace FrameBook.ProfissionalAPI
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+            });
+
+            app.UseSwagger();
+            app.UseSwaggerUI(opt => {
+
+                opt.SwaggerEndpoint("/swagger/v1/Swagger.json", "Swagger V1");
+
             });
         }
     }
