@@ -15,6 +15,7 @@ namespace FrameBook.Infra.Data
         public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options) { }
 
         public DbSet<Profissional> Profissionais { get; set; }
+        public DbSet<Stack> Stacks { get; set; }
 
         public override int SaveChanges()
         {
@@ -37,6 +38,7 @@ namespace FrameBook.Infra.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new ProfissionalMap());
+            modelBuilder.ApplyConfiguration(new StackMap());
         }
     }
 }

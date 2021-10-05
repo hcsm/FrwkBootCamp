@@ -19,20 +19,30 @@ namespace FrameBook.Infra.CrossCutting.IOC
         public static void Load(ContainerBuilder builder)
         {
             #region IOC Application
+            builder.RegisterType<BusinessServiceGestaoStack>().As<IBusinessServiceGestaoStack>();
             builder.RegisterType<BusinessServiceGestaoProfissional>().As<IBusinessServiceGestaoProfissional>();
             #endregion
 
             #region IOC Services
+            builder.RegisterType<ServiceStack>().As<IServiceStack>();
             builder.RegisterType<ServiceProfissional>().As<IServiceProfissional>();
             #endregion
 
             #region IOC Repositorys SQL
+            builder.RegisterType<RepositoryStack>().As<IRepositoryStack>();
             builder.RegisterType<RepositoryProfissional>().As<IRepositoryProfissional>();
             #endregion
 
             #region IOC Mapper
             builder.Register(context => new MapperConfiguration(cfg =>
             {
+                #region Stack
+                cfg.CreateMap<Stack, StackDTO>();
+                cfg.CreateMap<StackDTO, Stack>();
+                cfg.CreateMap<List<StackDTO>, List<Stack>>();
+                cfg.CreateMap<List<Stack>, List<StackDTO>>();
+                #endregion
+
                 cfg.CreateMap<Profissional, ProfissionalDTO>();
                 cfg.CreateMap<ProfissionalDTO, Profissional>();
                 cfg.CreateMap<List<ProfissionalDTO>, List<Profissional>>();
