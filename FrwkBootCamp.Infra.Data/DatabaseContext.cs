@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using FrameBook.Domain.Models;
+using FrameBook.Infra.Data.EntityConfig;
 using Microsoft.EntityFrameworkCore;
 
 namespace FrameBook.Infra.Data
@@ -31,6 +32,11 @@ namespace FrameBook.Infra.Data
             }
 
             return base.SaveChanges();
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new ProfissionalMap());
         }
     }
 }

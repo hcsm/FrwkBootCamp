@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\FrwkBootCamp.Application.DTO\FrameBook.Business.DTO.csproj" />
     <ProjectReference Include="..\FrwkBootCamp.Domain\FrameBook.Domain.csproj" />
   </ItemGroup>
