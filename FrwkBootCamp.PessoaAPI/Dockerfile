@@ -7,16 +7,23 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
 WORKDIR /src
-COPY ["FrwkBootCamp.ProfissionalAPI/FrwkBootCamp.ProfissionalAPI.csproj", "FrwkBootCamp.ProfissionalAPI/"]
-RUN dotnet restore "FrwkBootCamp.ProfissionalAPI/FrwkBootCamp.ProfissionalAPI.csproj"
+COPY ["FrwkBootCamp.PessoaAPI/FrameBook.ProfissionalAPI.csproj", "FrwkBootCamp.PessoaAPI/"]
+COPY ["FrwkBootCamp.Infra.Data/FrameBook.Infra.Data.csproj", "FrwkBootCamp.Infra.Data/"]
+COPY ["FrwkBootCamp.Domain/FrameBook.Domain.csproj", "FrwkBootCamp.Domain/"]
+COPY ["FrwkBootCamp.Application/FrameBook.Business.csproj", "FrwkBootCamp.Application/"]
+COPY ["FrwkBootCamp.Application.DTO/FrameBook.Business.DTO.csproj", "FrwkBootCamp.Application.DTO/"]
+COPY ["FrwBootCamp.Infra.CrossCutting.Adapter/FrameBook.Infra.CrossCutting.Adapter.csproj", "FrwBootCamp.Infra.CrossCutting.Adapter/"]
+COPY ["FrwBootCamp.Infra.CrossCutting.IOC/FrameBook.Infra.CrossCutting.IOC.csproj", "FrwBootCamp.Infra.CrossCutting.IOC/"]
+COPY ["FrwkBootCamp.Infra.Repository/FrameBook.Infra.Repository.csproj", "FrwkBootCamp.Infra.Repository/"]
+RUN dotnet restore "FrwkBootCamp.PessoaAPI/FrameBook.ProfissionalAPI.csproj"
 COPY . .
-WORKDIR "/src/FrwkBootCamp.ProfissionalAPI"
-RUN dotnet build "FrwkBootCamp.ProfissionalAPI.csproj" -c Release -o /app/build
+WORKDIR "/src/FrwkBootCamp.PessoaAPI"
+RUN dotnet build "FrameBook.ProfissionalAPI.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "FrwkBootCamp.ProfissionalAPI.csproj" -c Release -o /app/publish
+RUN dotnet publish "FrameBook.ProfissionalAPI.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "FrwkBootCamp.ProfissionalAPI.dll"]
+ENTRYPOINT ["dotnet", "FrameBook.ProfissionalAPI.dll"]
