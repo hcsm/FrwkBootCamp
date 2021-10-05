@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using FrameBook.Business.DTO.DTO;
 using FrameBook.Business.Interfaces;
+using AutoMapper;
 
 namespace FrameBook.ProfissionalAPI.Controllers
 {
@@ -9,12 +10,14 @@ namespace FrameBook.ProfissionalAPI.Controllers
     [ApiController]
     public class ProfissionalController : ControllerBase
     {
-
         private readonly IBusinessServiceGestaoProfissional _businessServiceGestaoProfissional;
+        IMapper _mapper;
 
-        public ProfissionalController(IBusinessServiceGestaoProfissional businessServiceGestaoProfissional)
+        public ProfissionalController(IBusinessServiceGestaoProfissional businessServiceGestaoProfissional,
+            IMapper mapper)
         {
             _businessServiceGestaoProfissional = businessServiceGestaoProfissional;
+            _mapper = mapper;
         }
 
         // GET api/values
@@ -28,7 +31,9 @@ namespace FrameBook.ProfissionalAPI.Controllers
         [HttpGet("{id}")]
         public ActionResult<string> Get(int id)
         {
-            return Ok(_businessServiceGestaoProfissional.GetById(id));
+            var profissional = _businessServiceGestaoProfissional.GetById(id);
+            var profissionalDTO = _mapper.Map<ProfissionalDTO>(profissional);
+            return Ok(profissionalDTO);
         }
 
         // POST api/values

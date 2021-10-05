@@ -5,10 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.10" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\FrwkBootCamp.Domain\FrameBook.Domain.csproj" />
     <ProjectReference Include="..\FrwkBootCamp.Infra.Data\FrameBook.Infra.Data.csproj" />
   </ItemGroup>

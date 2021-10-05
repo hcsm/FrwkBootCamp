@@ -1,25 +1,26 @@
 ﻿using System.Collections.Generic;
+using AutoMapper;
 using FrameBook.Business.DTO.DTO;
 using FrameBook.Business.Interfaces;
 using FrameBook.Domain.Interfaces.Services;
-using FrameBook.Infra.CrossCutting.Adapter.Interfaces;
+using FrameBook.Domain.Models;
 
 namespace FrameBook.Business.Service
 {
     public class BusinessServiceGestaoProfissional : IBusinessServiceGestaoProfissional
     {
         private readonly IServiceProfissional _serviceProfissional;
-        private readonly IMapperProfissional _mapperProfissional;
+        private readonly IMapper _mapper;
 
-        public BusinessServiceGestaoProfissional(IServiceProfissional serviceProfissional, IMapperProfissional MapperProfissional)
+        public BusinessServiceGestaoProfissional(IServiceProfissional serviceProfissional, IMapper mapper)
         {
             _serviceProfissional = serviceProfissional;
-            _mapperProfissional = MapperProfissional;
+            _mapper = mapper;
         }
 
         public void Add(ProfissionalDTO obj)
         {
-            var objProfissional = _mapperProfissional.MapperToEntity(obj);
+            var objProfissional = _mapper.Map<Profissional>(obj);
             _serviceProfissional.Add(objProfissional);
         }
 
@@ -31,7 +32,7 @@ namespace FrameBook.Business.Service
         public IEnumerable<ProfissionalDTO> GetAll()
         {
             var objProfissionais = _serviceProfissional.GetAll();
-            return _mapperProfissional.MapperListProfissionals(objProfissionais);
+            return _mapper.Map<List<ProfissionalDTO>>(objProfissionais);
         }
 
         public ProfissionalDTO GetById(int id)
@@ -39,18 +40,18 @@ namespace FrameBook.Business.Service
             var objProfissional = _serviceProfissional.GetById(id);
             if (objProfissional == null)
                 return null;
-            return _mapperProfissional.MapperToDTO(objProfissional);
+            return _mapper.Map<ProfissionalDTO>(objProfissional);
         }
 
         public void Remove(ProfissionalDTO obj)
         {
-            var objProfissional = _mapperProfissional.MapperToEntity(obj);
+            var objProfissional = _mapper.Map<Profissional>(obj);
             _serviceProfissional.Remove(objProfissional);
         }
 
         public void Update(ProfissionalDTO obj)
         {
-            var objProfissional = _mapperProfissional.MapperToEntity(obj);
+            var objProfissional = _mapper.Map<Profissional>(obj);
             _serviceProfissional.Update(objProfissional);
         }
     }
