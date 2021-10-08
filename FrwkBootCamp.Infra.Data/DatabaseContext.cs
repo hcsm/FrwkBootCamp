@@ -16,6 +16,7 @@ namespace FrameBook.Infra.Data
 
         public DbSet<Profissional> Profissionais { get; set; }
         public DbSet<Stack> Stacks { get; set; }
+        public DbSet<RefreshToken> RefreshToken { get; set; }
 
         public override int SaveChanges()
         {
@@ -39,6 +40,7 @@ namespace FrameBook.Infra.Data
         {
             modelBuilder.ApplyConfiguration(new ProfissionalMap());
             modelBuilder.ApplyConfiguration(new StackMap());
+            modelBuilder.ApplyConfiguration(new RefreshTokenMap());
         }
     }
 }
