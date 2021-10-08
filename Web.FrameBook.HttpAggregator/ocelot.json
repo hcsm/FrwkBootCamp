@@ -1,0 +1,55 @@
+{
+  "ReRoutes": [
+    {
+      "DownstreamPathTemplate": "/Profissional/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8000
+        }
+      ],
+      "UpstreamPathTemplate": "/web/profissional/{id}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "getProfissional"
+    },
+    {
+      "DownstreamPathTemplate": "/Profissional/{id}/Stacks/Experiencia",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 9000
+        }
+      ],
+      "UpstreamPathTemplate": "/web/profissional/{id}/stacks/experiencia",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "getStacksExperiencia"
+    },
+    {
+      "DownstreamPathTemplate": "/Profissional/{id}/Stacks/Deseja",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 9500
+        }
+      ],
+      "UpstreamPathTemplate": "/web/profissional/{id}/stacks/deseja",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Key": "getStacksDeseja"
+    }
+  ],
+  "Aggregates": [
+    {
+      "ReRouteKeys": [
+        "getProfissional",
+        "getStacksExperiencia",
+        "getStacksDeseja"
+      ],
+      "UpstreamPathTemplate": "/web/profissional-stacks/{id}",
+      "Aggregator": "ProfissionalStacksAggregator"
+    }
+  ],
+  "GlobalConfiguration": {}
+}

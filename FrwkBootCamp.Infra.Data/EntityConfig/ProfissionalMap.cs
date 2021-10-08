@@ -1,0 +1,22 @@
+﻿using FrameBook.Domain.Models;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+
+namespace FrameBook.Infra.Data.EntityConfig
+{
+    public class ProfissionalMap : IEntityTypeConfiguration<Profissional>
+    {
+        public void Configure(EntityTypeBuilder<Profissional> builder)
+        {
+            builder.ToTable("Profissional");
+
+            builder.HasKey(x => x.Id);
+
+            builder.Property(p => p.Nome).IsRequired();
+            builder.Property(p => p.Email).IsRequired();
+            builder.Property(p => p.Estado).HasMaxLength(2).IsFixedLength();
+            builder.Property(p => p.Cidade).HasMaxLength(250);
+            builder.Property(p => p.Telefone).HasMaxLength(120);
+        }
+    }
+}

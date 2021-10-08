@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FrwkBootCamp.Domain.Core\FrwkBootCamp.Domain.Core.csproj" />
+    <ProjectReference Include="..\FrwkBootCamp.Domain\FrwkBootCamp.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
