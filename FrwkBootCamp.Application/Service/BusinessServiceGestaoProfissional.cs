@@ -35,9 +35,9 @@ namespace FrameBook.Business.Service
             return _mapper.Map<List<ProfissionalDTO>>(objProfissionais);
         }
 
-        public ProfissionalDTO GetById(int id)
+        public ProfissionalDTO GetByEmail(string email)
         {
-            var objProfissional = _serviceProfissional.GetById(id);
+            var objProfissional = _serviceProfissional.GetByEmail(email);
             if (objProfissional == null)
                 return null;
             return _mapper.Map<ProfissionalDTO>(objProfissional);

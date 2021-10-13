@@ -28,10 +28,10 @@ namespace FrameBook.ProfissionalAPI.Controllers
         }
 
         // GET api/values/5
-        [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        [HttpGet("{email}")]
+        public ActionResult<string> Get(string email)
         {
-            var profissional = _businessServiceGestaoProfissional.GetById(id);
+            var profissional = _businessServiceGestaoProfissional.GetByEmail(email);
             var profissionalDTO = _mapper.Map<ProfissionalDTO>(profissional);
             return Ok(profissionalDTO);
         }

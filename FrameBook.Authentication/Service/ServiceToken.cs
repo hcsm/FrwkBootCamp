@@ -17,15 +17,8 @@ namespace FrameBook.Authentication.Service
 {
     public class ServiceToken : IServiceToken
     {
-        private readonly IServiceProfissional _serviceProfissional;
-        private readonly IServiceRefreshToken _serviceRefreshToken;
-        private readonly IMapper _mapper;
-
-        public ServiceToken(IServiceProfissional serviceProfissional, IServiceRefreshToken serviceRefreshToken, IMapper mapper)
+        public ServiceToken()
         {
-            _serviceProfissional = serviceProfissional;
-            _serviceRefreshToken = serviceRefreshToken;
-            _mapper = mapper;
         }
 
         public RefreshToken GenerateRefreshtoken(string email, string nome, string ipAddress)
@@ -44,10 +37,6 @@ namespace FrameBook.Authentication.Service
                     Created = DateTime.UtcNow,
                     CreatedByIp = ipAddress
                 };
-
-                var objRefreshToken = _mapper.Map<RefreshToken>(refreshToken);
-
-                _serviceRefreshToken.Add(objRefreshToken);
 
                 return refreshToken;
             }

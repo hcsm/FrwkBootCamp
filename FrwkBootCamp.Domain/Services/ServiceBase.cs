@@ -17,10 +17,6 @@ namespace FrameBook.Domain.Services
         {
             _repository.Add(obj);
         }
-        public virtual TEntity GetById(int id)
-        {
-            return _repository.GetById(id);
-        }
         public virtual IEnumerable<TEntity> GetAll()
         {
             return _repository.GetAll();

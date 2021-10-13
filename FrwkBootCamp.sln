@@ -47,7 +47,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrameBook.StackAPI", "Frame
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.0 - Authentication", "5.0 - Authentication", "{FDC1ACF5-CB99-412B-B4A4-8B05F88B567A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrameBook.Authentication", "FrameBook.Authentication\FrameBook.Authentication.csproj", "{770ADD3B-17F2-4287-9D58-EDDDA00A013B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrameBook.Authentication", "FrameBook.Authentication\FrameBook.Authentication.csproj", "{770ADD3B-17F2-4287-9D58-EDDDA00A013B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrameBook.AuthAPI", "FrameBook.AuthAPI\FrameBook.AuthAPI.csproj", "{3BE8484C-13D4-4895-B762-CF48EF904366}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -99,6 +101,10 @@ Global
 		{770ADD3B-17F2-4287-9D58-EDDDA00A013B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{770ADD3B-17F2-4287-9D58-EDDDA00A013B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{770ADD3B-17F2-4287-9D58-EDDDA00A013B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BE8484C-13D4-4895-B762-CF48EF904366}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BE8484C-13D4-4895-B762-CF48EF904366}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BE8484C-13D4-4895-B762-CF48EF904366}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BE8484C-13D4-4895-B762-CF48EF904366}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -126,6 +132,7 @@ Global
 		{E298B6B1-FDC3-4936-B777-A31FBDB9CA03} = {AE5E3EC0-490F-417B-A030-25A5E81AE2CD}
 		{FDC1ACF5-CB99-412B-B4A4-8B05F88B567A} = {124AE427-1421-48B1-A963-2E0F105CA9CB}
 		{770ADD3B-17F2-4287-9D58-EDDDA00A013B} = {FDC1ACF5-CB99-412B-B4A4-8B05F88B567A}
+		{3BE8484C-13D4-4895-B762-CF48EF904366} = {AE5E3EC0-490F-417B-A030-25A5E81AE2CD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C853F97B-D0C8-44AA-AB60-EE8CEDBDF78C}
