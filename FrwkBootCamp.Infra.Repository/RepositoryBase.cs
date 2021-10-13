@@ -22,7 +22,6 @@ namespace FrameBook.Infra.Repository
             {
                 _context.Set<TEntity>().Add(obj);
                 _context.SaveChanges();
-
             }
             catch (Exception ex)
             {

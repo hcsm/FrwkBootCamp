@@ -32,7 +32,7 @@ namespace FrameBook.Business.Service
         public IEnumerable<ProfissionalDTO> GetAll()
         {
             var objProfissionais = _serviceProfissional.GetAll();
-            return _mapper.Map<List<ProfissionalDTO>>(objProfissionais);
+            return _mapper.Map<IEnumerable<ProfissionalDTO>>(objProfissionais);
         }
 
         public ProfissionalDTO GetByEmail(string email)
