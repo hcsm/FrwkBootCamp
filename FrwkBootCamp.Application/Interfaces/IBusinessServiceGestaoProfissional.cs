@@ -6,8 +6,9 @@ namespace FrameBook.Business.Interfaces
     public interface IBusinessServiceGestaoProfissional
     {
         void Add(ProfissionalDTO obj);
-
-        ProfissionalDTO GetById(int id);
+        #nullable enable
+        ProfissionalDTO? GetByEmail(string email);
+        #nullable disable
 
         IEnumerable<ProfissionalDTO> GetAll();
 

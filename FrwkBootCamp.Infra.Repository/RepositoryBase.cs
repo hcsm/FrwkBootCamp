@@ -11,7 +11,7 @@ namespace FrameBook.Infra.Repository
     {
         private readonly DatabaseContext _context;
 
-        public RepositoryBase(DatabaseContext Context)
+        public RepositoryBase(DatabaseContext Context) 
         {
             _context = Context;
         }

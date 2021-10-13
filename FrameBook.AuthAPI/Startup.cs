@@ -8,7 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace FrameBook.ProfissionalAPI
+namespace FrameBook.AuthAPI
 {
     public class Startup
     {
@@ -22,12 +22,15 @@ namespace FrameBook.ProfissionalAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSingleton<IConfiguration>(Configuration);
+
             services.AddDbContext<DatabaseContext>(options => options.UseMySql(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddControllers();
-            
-            services.AddSwaggerGen(c => {
-                c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "Swagger", Version = "v1" });
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "AuthAPI", Version = "v1" });
             });
         }
 
@@ -48,7 +51,7 @@ namespace FrameBook.ProfissionalAPI
 
             app.UseRouting();
 
-            app.UseAuthentication();
+            app.UseAuthorization();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

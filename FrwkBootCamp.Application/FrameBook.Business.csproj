@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\FrwBootCamp.Infra.CrossCutting.Adapter\FrameBook.Infra.CrossCutting.Adapter.csproj" />
     <ProjectReference Include="..\FrwkBootCamp.Application.DTO\FrameBook.Business.DTO.csproj" />
     <ProjectReference Include="..\FrwkBootCamp.Domain\FrameBook.Domain.csproj" />

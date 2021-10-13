@@ -6,8 +6,6 @@ namespace FrameBook.Domain.Interfaces.Repositories
     {
         void Add(TEntity obj);
 
-        TEntity GetById(int id);
-
         IEnumerable<TEntity> GetAll();
 
         void Update(TEntity obj);

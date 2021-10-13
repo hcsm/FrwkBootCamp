@@ -6,8 +6,6 @@ namespace FrameBook.Domain.Interfaces.Services
     {
         void Add(TEntity obj);
 
-        TEntity GetById(int id);
-
         IEnumerable<TEntity> GetAll();
 
         void Update(TEntity obj);

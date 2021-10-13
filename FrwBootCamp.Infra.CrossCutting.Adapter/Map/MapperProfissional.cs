@@ -13,12 +13,12 @@ namespace FrameBook.Infra.CrossCutting.Adapter.Map
         {
             Profissional profissional = new Profissional
             {
-                Id = profissionalDTO.Id,
                 Nome = profissionalDTO.Nome,
                 Email = profissionalDTO.Email,
                 Telefone = profissionalDTO.Telefone,
                 Cidade = profissionalDTO.Cidade,
-                Estado = profissionalDTO.Estado
+                Estado = profissionalDTO.Estado,
+                Senha = profissionalDTO.Senha
             };
 
             return profissional;
@@ -30,12 +30,12 @@ namespace FrameBook.Infra.CrossCutting.Adapter.Map
             {
                 ProfissionalDTO profissionalDTO = new ProfissionalDTO
                 {
-                    Id = item.Id,
                     Nome = item.Nome,
                     Email = item.Email,
                     Telefone = item.Telefone,
                     Cidade = item.Cidade,
-                    Estado = item.Estado
+                    Estado = item.Estado,
+                    Senha = item.Senha
                 };
 
                 ProfissionalDTOs.Add(profissionalDTO);
@@ -49,12 +49,12 @@ namespace FrameBook.Infra.CrossCutting.Adapter.Map
 
             ProfissionalDTO profissionalDTO = new ProfissionalDTO
             {
-                Id = profissional.Id,
                 Nome = profissional.Nome,
                 Email = profissional.Email,
                 Telefone = profissional.Telefone,
                 Cidade = profissional.Cidade,
-                Estado = profissional.Estado
+                Estado = profissional.Estado,
+                Senha = profissional.Senha
             };
 
             return profissionalDTO;
