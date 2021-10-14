@@ -361,4 +361,6 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
-/FrwkBootCamp.Infra.Data/Migrations
+# /FrwkBootCamp.Infra.Data/Migrations
+
+
