@@ -5,12 +5,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Migrations\20211007155509_criacao-banco.cs" />
-    <Compile Remove="Migrations\20211007155509_criacao-banco.Designer.cs" />
-    <Compile Remove="Migrations\20211008125930_criacao-refresh-token.cs" />
-    <Compile Remove="Migrations\20211008125930_criacao-refresh-token.Designer.cs" />
-    <Compile Remove="Migrations\20211013124246_criacao-campo-senha.cs" />
-    <Compile Remove="Migrations\20211013124246_criacao-campo-senha.Designer.cs" />
+    <Compile Remove="Migrations\**" />
+    <EmbeddedResource Remove="Migrations\**" />
+    <None Remove="Migrations\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Migrations\20211014132134_MigracaoInicial.cs" />
+    <Compile Include="Migrations\20211014132134_MigracaoInicial.Designer.cs" />
+    <Compile Include="Migrations\20211014135217_MudançaEstadoUf.cs" />
+    <Compile Include="Migrations\20211014135217_MudançaEstadoUf.Designer.cs" />
+    <Compile Include="Migrations\DatabaseContextModelSnapshot.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -32,10 +37,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\FrwkBootCamp.Domain\FrameBook.Domain.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Migrations\" />
   </ItemGroup>
 
 </Project>

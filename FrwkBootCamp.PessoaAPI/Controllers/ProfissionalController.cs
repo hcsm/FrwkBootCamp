@@ -6,7 +6,7 @@ using AutoMapper;
 
 namespace FrameBook.ProfissionalAPI.Controllers
 {
-    [Route("[controller]")]
+    [Route("api/v1/[controller]")]
     [ApiController]
     public class ProfissionalController : ControllerBase
     {

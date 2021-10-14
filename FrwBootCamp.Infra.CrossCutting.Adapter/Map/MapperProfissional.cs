@@ -17,7 +17,7 @@ namespace FrameBook.Infra.CrossCutting.Adapter.Map
                 Email = profissionalDTO.Email,
                 Telefone = profissionalDTO.Telefone,
                 Cidade = profissionalDTO.Cidade,
-                Estado = profissionalDTO.Estado,
+                Uf = profissionalDTO.Uf,
                 Senha = profissionalDTO.Senha
             };
 
@@ -34,7 +34,7 @@ namespace FrameBook.Infra.CrossCutting.Adapter.Map
                     Email = item.Email,
                     Telefone = item.Telefone,
                     Cidade = item.Cidade,
-                    Estado = item.Estado,
+                    Uf = item.Uf,
                     Senha = item.Senha
                 };
 
@@ -53,7 +53,7 @@ namespace FrameBook.Infra.CrossCutting.Adapter.Map
                 Email = profissional.Email,
                 Telefone = profissional.Telefone,
                 Cidade = profissional.Cidade,
-                Estado = profissional.Estado,
+                Uf = profissional.Uf,
                 Senha = profissional.Senha
             };
 
