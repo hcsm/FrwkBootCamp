@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+    apigateway:
+        container_name: apigateway
+        depends_on:
+            - api.profissional
+            - api.stack
+        ports:
+            - "7000:80"
+
+    api.professional:
+        container_name: apiprofessional
+        restart: on-failure
+        ports:
+            - "8001:80"
+
+    api.stack:
+        container_name: apistack
+        restart: on-failure
+        ports:
+            - "8002:80"
+      

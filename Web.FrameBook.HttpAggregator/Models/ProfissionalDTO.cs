@@ -17,6 +17,6 @@ namespace Web.FrameBook.HttpAggregator.Models
 
         public string Cidade { get; set; }
 
-        public string Estado { get; set; }
+        public string Uf { get; set; }
     }
 }

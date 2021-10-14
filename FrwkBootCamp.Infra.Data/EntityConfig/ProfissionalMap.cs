@@ -14,7 +14,7 @@ namespace FrameBook.Infra.Data.EntityConfig
 
             builder.Property(p => p.Nome).IsRequired();
             builder.Property(p => p.Email).IsRequired();
-            builder.Property(p => p.Estado).HasMaxLength(2).IsFixedLength();
+            builder.Property(p => p.Uf).HasMaxLength(2).IsFixedLength();
             builder.Property(p => p.Cidade).HasMaxLength(250);
             builder.Property(p => p.Telefone).HasMaxLength(120);
             builder.Property(p => p.Senha).HasMaxLength(120);
