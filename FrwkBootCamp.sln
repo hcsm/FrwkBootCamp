@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{95A03E0A-396A-468E-B2BD-369901627931}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yaml = docker-compose.yaml
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiGateways", "ApiGateways", "{0031A73B-3EEE-4A2D-B66C-F3D0C6B724B9}"
 EndProject
@@ -47,7 +50,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrameBook.StackAPI", "Frame
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.0 - Authentication", "5.0 - Authentication", "{FDC1ACF5-CB99-412B-B4A4-8B05F88B567A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrameBook.Authentication", "FrameBook.Authentication\FrameBook.Authentication.csproj", "{770ADD3B-17F2-4287-9D58-EDDDA00A013B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FrameBook.Authentication", "FrameBook.Authentication\FrameBook.Authentication.csproj", "{770ADD3B-17F2-4287-9D58-EDDDA00A013B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
