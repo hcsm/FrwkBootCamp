@@ -6,9 +6,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Configuration\**" />
+    <Content Remove="Configuration\**" />
+    <EmbeddedResource Remove="Configuration\**" />
+    <None Remove="Configuration\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.7" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.11.1" />
-    <PackageReference Include="Ocelot" Version="15.0.7" />
+    <PackageReference Include="MMLib.Ocelot.Provider.AppConfiguration" Version="1.1.0" />
+    <PackageReference Include="MMLib.SwaggerForOcelot" Version="3.2.1" />
+    <PackageReference Include="Ocelot" Version="16.0.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.2" />
   </ItemGroup>
 
 </Project>

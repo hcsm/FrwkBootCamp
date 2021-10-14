@@ -1,11 +1,12 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Web.FrameBook.HttpAggregator.Aggregator;
 
 namespace ApiGateway
@@ -22,18 +23,29 @@ namespace ApiGateway
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddOcelot(configuration)
-                    .AddTransientDefinedAggregator<ProfissionalStacksAggregator>();                    
+            services.AddOcelot()
+                .AddTransientDefinedAggregator<ProfissionalStacksAggregator>();                    
+
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
+
+
+            services.AddSwaggerForOcelot(configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UsePathBase("/gateway");
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            app.UseStaticFiles();
+            app.UseSwaggerForOcelotUI(opt =>
+            {
+                opt.DownstreamSwaggerEndPointBasePath = "/gateway/swagger/docs";
+                opt.PathToSwaggerGenerator = "/swagger/docs";
+            });
             app.UseHttpsRedirection();
 
             app.UseRouting();
@@ -42,13 +54,14 @@ namespace ApiGateway
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGet("/", async context => {
-
-                    await context.Response.WriteAsync("Web BFF - ON");
+                endpoints.MapGet("/", async context =>
+                {
+                    await context.Response.WriteAsync("API GATEWAY FUNCIONANDO");
                 });
             });
 
             app.UseOcelot().Wait();
+
         }
     }
 }

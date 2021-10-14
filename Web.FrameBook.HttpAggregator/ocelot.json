@@ -1,55 +1,56 @@
 {
-  "ReRoutes": [
+  "Routes": [
     {
-      "DownstreamPathTemplate": "/Profissional/{id}",
-      "DownstreamScheme": "http",
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 8000
+          "Port": 44336
         }
       ],
-      "UpstreamPathTemplate": "/web/profissional/{id}",
-      "UpstreamHttpMethod": [ "Get" ],
-      "Key": "getProfissional"
+      "UpstreamPathTemplate": "/api/profissional/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "SwaggerKey": "profissional"
     },
     {
-      "DownstreamPathTemplate": "/Profissional/{id}/Stacks/Experiencia",
-      "DownstreamScheme": "http",
+      "DownstreamPathTemplate": "/api/{everything}",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 9000
+          "Port": 64980
         }
       ],
-      "UpstreamPathTemplate": "/web/profissional/{id}/stacks/experiencia",
-      "UpstreamHttpMethod": [ "Get" ],
-      "Key": "getStacksExperiencia"
+      "UpstreamPathTemplate": "/api/stack{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Put", "Delete" ],
+      "SwaggerKey": "stack"
+    }
+  ],
+  "SwaggerEndPoints": [
+    {
+      "Key": "profissional",
+      "Config": [
+        {
+          "Name": "Profissional API",
+          "Version": "v1",
+          "Url": "https://localhost:44336/swagger/v1/swagger.json"
+        }
+      ]
     },
     {
-      "DownstreamPathTemplate": "/Profissional/{id}/Stacks/Deseja",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
+      "Key": "stack",
+      "Config": [
         {
-          "Host": "localhost",
-          "Port": 9500
+          "Name": "Stack API",
+          "Version": "v1",
+          "Url": "http://localhost:64980/swagger/v1/swagger.json"
         }
-      ],
-      "UpstreamPathTemplate": "/web/profissional/{id}/stacks/deseja",
-      "UpstreamHttpMethod": [ "Get" ],
-      "Key": "getStacksDeseja"
+      ]
     }
   ],
-  "Aggregates": [
-    {
-      "ReRouteKeys": [
-        "getProfissional",
-        "getStacksExperiencia",
-        "getStacksDeseja"
-      ],
-      "UpstreamPathTemplate": "/web/profissional-stacks/{id}",
-      "Aggregator": "ProfissionalStacksAggregator"
-    }
-  ],
-  "GlobalConfiguration": {}
+
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost"
+  }
 }
