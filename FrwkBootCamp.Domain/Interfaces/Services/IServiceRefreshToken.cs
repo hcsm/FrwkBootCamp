@@ -7,5 +7,6 @@ namespace FrameBook.Domain.Interfaces.Services
 {
     public interface IServiceRefreshToken : IServiceBase<RefreshToken>
     {
+
     }
 }

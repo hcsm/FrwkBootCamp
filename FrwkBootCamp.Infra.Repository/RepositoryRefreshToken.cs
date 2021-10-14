@@ -1,15 +1,15 @@
 ﻿using FrameBook.Domain.Interfaces.Repositories;
 using FrameBook.Domain.Models;
 using FrameBook.Infra.Data;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace FrameBook.Infra.Repository
 {
-    public class RepositoryProfissional : RepositoryBase<Profissional>, IRepositoryProfissional
+    public class RepositoryRefreshToken : RepositoryBase<RefreshToken>, IRepositoryAuth
     {
         private readonly DatabaseContext _context;
-        public RepositoryProfissional(DatabaseContext Context)
+
+        public RepositoryRefreshToken(DatabaseContext Context)
             : base(Context)
         {
             _context = Context;
