@@ -6,7 +6,7 @@ using AutoMapper;
 
 namespace FrameBook.StackAPI.Controllers
 {
-    [Route("[controller]")]
+    [Route("api/v1/[controller]")]
     [ApiController]
     public class StackController : ControllerBase
     {

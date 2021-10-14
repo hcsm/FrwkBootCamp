@@ -15,3 +15,8 @@ services:
         build:
             context: .
             dockerfile: FrwkBootCamp\FrameBook.StackAPI\Dockerfile
+
+    api.auth:
+        build:
+            context: .
+            dockerfile: FrwkBootCamp\FrameBook.AuthAPI\Dockerfile

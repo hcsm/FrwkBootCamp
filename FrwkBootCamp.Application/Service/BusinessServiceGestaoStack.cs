@@ -32,7 +32,7 @@ namespace FrameBook.Business.Service
         public IEnumerable<StackDTO> GetAll()
         {
             var objStack = _serviceStack.GetAll();
-            return _mapper.Map<List<StackDTO>>(objStack);
+            return _mapper.Map<IEnumerable<StackDTO>>(objStack);
         }
 
         public StackDTO GetById(int id)

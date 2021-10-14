@@ -11,7 +11,7 @@ using System;
 
 namespace FrameBook.AuthAPI.Controllers
 {
-    [Route("[controller]")]
+    [Route("api/v1/[controller]")]
     [ApiController]
     public class AuthController : ControllerBase
     {
