@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FrameBook.Infra.Data.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20211014135217_MudançaEstadoUf")]
-    partial class MudançaEstadoUf
+    [Migration("20211014203632_InitalDB")]
+    partial class InitalDB
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

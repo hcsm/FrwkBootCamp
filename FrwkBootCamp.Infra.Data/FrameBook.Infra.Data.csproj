@@ -1,22 +1,8 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Compile Remove="Migrations\**" />
-    <EmbeddedResource Remove="Migrations\**" />
-    <None Remove="Migrations\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Include="Migrations\20211014132134_MigracaoInicial.cs" />
-    <Compile Include="Migrations\20211014132134_MigracaoInicial.Designer.cs" />
-    <Compile Include="Migrations\20211014135217_MudançaEstadoUf.cs" />
-    <Compile Include="Migrations\20211014135217_MudançaEstadoUf.Designer.cs" />
-    <Compile Include="Migrations\DatabaseContextModelSnapshot.cs" />
-  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.19" />

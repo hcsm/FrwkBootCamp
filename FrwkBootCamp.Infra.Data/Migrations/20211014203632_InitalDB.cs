@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace FrameBook.Infra.Data.Migrations
 {
-    public partial class MigracaoInicial : Migration
+    public partial class InitalDB : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
