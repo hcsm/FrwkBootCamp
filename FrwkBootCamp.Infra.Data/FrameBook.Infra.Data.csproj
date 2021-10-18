@@ -5,12 +5,24 @@
   </PropertyGroup>
 
   <ItemGroup>
+<<<<<<< Updated upstream
     <Compile Remove="Migrations\20211007155509_criacao-banco.cs" />
     <Compile Remove="Migrations\20211007155509_criacao-banco.Designer.cs" />
     <Compile Remove="Migrations\20211008125930_criacao-refresh-token.cs" />
     <Compile Remove="Migrations\20211008125930_criacao-refresh-token.Designer.cs" />
     <Compile Remove="Migrations\20211013124246_criacao-campo-senha.cs" />
     <Compile Remove="Migrations\20211013124246_criacao-campo-senha.Designer.cs" />
+=======
+    <Compile Remove="Migrations\**" />
+    <EmbeddedResource Remove="Migrations\**" />
+    <None Remove="Migrations\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Migrations\20211014193343_criacao-banco.cs" />
+    <Compile Include="Migrations\20211014193343_criacao-banco.Designer.cs" />
+    <Compile Include="Migrations\DatabaseContextModelSnapshot.cs" />
+>>>>>>> Stashed changes
   </ItemGroup>
 
   <ItemGroup>

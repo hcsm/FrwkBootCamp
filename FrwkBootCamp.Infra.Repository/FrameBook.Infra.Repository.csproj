@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\FrwkBootCamp.Domain\FrameBook.Domain.csproj" />
     <ProjectReference Include="..\FrwkBootCamp.Infra.Data\FrameBook.Infra.Data.csproj" />
   </ItemGroup>

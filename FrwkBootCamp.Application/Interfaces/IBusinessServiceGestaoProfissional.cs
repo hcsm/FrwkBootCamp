@@ -7,7 +7,7 @@ namespace FrameBook.Business.Interfaces
     {
         void Add(ProfissionalDTO obj);
         #nullable enable
-        ProfissionalDTO? GetByEmail(string email);
+        ProfissionalDTO? GetByEmail(string email, string senha);
         #nullable disable
 
         IEnumerable<ProfissionalDTO> GetAll();
