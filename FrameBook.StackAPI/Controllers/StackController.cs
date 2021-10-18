@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using FrameBook.Business.DTO.DTO;
 using FrameBook.Business.Interfaces;
 using AutoMapper;
+using Sentry;
 
 namespace FrameBook.StackAPI.Controllers
 {
@@ -25,6 +26,8 @@ namespace FrameBook.StackAPI.Controllers
         public ActionResult<IEnumerable<string>> Get()
         {
             var test = _businessServiceGestaoStack.GetAll();
+            // Exemplo log sentry
+            //SentrySdk.CaptureMessage("Get all");
             return Ok(test);
         }
 
