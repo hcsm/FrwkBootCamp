@@ -18,9 +18,9 @@ namespace FrameBook.Domain.Services
             _mapper = mapper;
         }
 
-        public ProfissionalDTO GetByEmail(string email)
+        public ProfissionalDTO GetByEmail(string email, string senha)
         {
-            var profissional = _repositoryProfissional.GetByEmail(email);
+            var profissional = _repositoryProfissional.GetByEmail(email, senha);
             return _mapper.Map<ProfissionalDTO>(profissional);
         }
     }

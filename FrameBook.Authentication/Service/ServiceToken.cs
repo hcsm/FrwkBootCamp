@@ -66,6 +66,18 @@ namespace FrameBook.Authentication.Service
             return tokenHandler.WriteToken(token);
         }
 
+        public static string HasPass(string senha)
+        {
+            try
+            {
+                return BCrypt.Net.BCrypt.HashPassword(senha);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
         public JwtSecurityToken Verify(string token, string secretKey = "")
         {
             try
